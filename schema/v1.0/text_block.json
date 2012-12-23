@@ -1,0 +1,46 @@
+{
+  "name": "TextBlock",
+  "description":"A single line text block. Multiline text-blocks inherit from this one, see textflow for ref.",
+  "type":"object",
+  "extends": "Block",
+  "properties":{
+    "defaulttext": {
+      "description": "Content if no text is supplied by the client.",
+      "type": "string"
+    },
+    "fillcolor":{
+      "description": "Text fill color. Defaults to black",
+      "type": "color",
+      "default": "gray 0"
+    },
+    "fontname":{
+      "description": "Name of the font. Must be the exact file-name as present on the system(Case-Sensitive), excl. file extension. Must be an OTF, TTF unicode font as all text is UTF-8.",
+      "type": "string"
+    },
+    "fontsize":{
+      "description": "Size of the font in points",
+      "type": "float"
+    },
+    "fontstyle":{
+      "description": "Style of the font. If the font does not support the style e.g. Bold print occurs 3 times with normal style.",
+      "type": "enum",
+      "values": ["normal", "bold", "italic","bolditalic"]
+    },
+    "strokecolor":{
+      "description": "Stroke(border) color of the text",
+      "type": "string",
+      "format": "color",
+      "default": "gray 0"
+    },
+    "textflow":{
+      "description": "This setting must be false, as it make the block a text-line box.",
+      "type": "boolean",
+      "default": "false"
+    },
+    "fitmethod":{
+      "type": "string",
+      "enum": ["auto","nofit","clip","meet", "slice", "entire"],
+      "default": "auto"
+    }
+  }
+}

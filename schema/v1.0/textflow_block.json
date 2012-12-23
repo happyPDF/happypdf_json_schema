@@ -1,0 +1,43 @@
+{
+  "name": "TextFlowBlock",
+  "description":"Multi line text block, inheriting all properties from Block and TextBlock.",
+  "type":"object",
+  "extends": "TextBlock",
+  "properties":{
+    "textflow ":{
+      "description": "This setting must be true, as it makes the block a textflow box.",
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "alignment":{
+      "description": "Alignment for lines in a paragraph.",
+      "type": "string",
+      "enum": ["left","center","right","justify"],
+      "default": "left"
+    },
+    "verticalalign":{
+      "description": "Vertical alignment for the text.",
+      "type": "string",
+      "enum": ["top","center","bottom","justify"],
+      "default": "top"
+    },
+    "leading":{
+      "description": "Line height(distance between text baselines). In points or as percentage of the font size.",
+      "type": ["number","string"],
+      "default": "100%"
+    },
+    "shrinklimit":{
+      "description": "Max. percentage for text shrinking, if it does not fit the box.",
+      "type": "string",
+      "default": "85%"
+    },
+    "fitmethod ":{
+      "description": "If the text does not fit: auto => fontsize and leading will be decreased until the text fits. nofit => Text will run beyond the bottom margin of the block. clip => Text will be clipped at the block margin.",
+      "type": "string",
+      "enum": ["auto","nofit","clip"],
+      "default": "auto",
+      "required": true
+    }
+  }
+}

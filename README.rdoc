@@ -14,7 +14,7 @@ Each Object has its own description, with those top-level keys:
 Look into the /json/ folder for the resources schema-files
 For ruby pirates this project is available as gem. It provides some utility
 methods to read the schema files and convert objects to their schema notation.
-See {/lib/sk_api_schema.rb}[https://github.com/salesking/sk_api_schema/blob/master/lib/sk_api_schema.rb]
+See {/lib/happypdf/schema.rb}[https://github.com/happypdf/happypdf_json_schema/blob/master/lib/happypdf/schema.rb]
 
 Other languages should take advantage of the raw json files.
 

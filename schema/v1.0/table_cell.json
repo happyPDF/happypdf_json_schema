@@ -1,0 +1,92 @@
+{
+  "name": "TableCell",
+  "description":"Table formatting can be done by passing a json string in the data-attribute table-opts in a html table definition.",
+  "type":"object",
+  "properties":{
+    "content": {
+      "description": "The text content for the cell. Probably something your want to fill.",
+      "type": "string"
+    },
+    "type": {
+      "description": "The cell type is auto-detected by the content length. texflow for >20 chars. Sometimes you should force the type since formatting options differ between line and textflow e.g. Text might start at different line height f.ex. in footer rows.",
+      "type": "boolean",
+      "values": ["textline", "textflow"]
+    },
+    "align": {
+      "description": "Align the text content.",
+      "type": "boolean",
+      "values": ["right", "left"]
+    },
+    "page_break_value": {
+      "description": "If the table has to be split the last cell in the last row can provide this value, used fo a sub total/carry over row.",
+      "type": "string"
+    },
+    "colspan": {
+      "description": "Columns spanned by this cell.",
+      "type": "number",
+      "default": 1
+    },
+    "rowspan": {
+      "description": "Rows spanned by this cell.",
+      "type": "number",
+      "default": 1
+    },
+    "colwidth": {
+      "description": "Column width. The last definition counts for all cells in a column",
+      "type": "boolean",
+      "default": false
+    },
+    "margin": {
+      "description": "Margin for all sides. Specific margins left,right,top,bottom override this value. Value can be given as number or percentage(string) and must be >0",
+      "type": ["number", "string"],
+      "minimum": 0,
+      "default": 0
+    },
+    "marginleft": {
+      "description": "Left Margin. Overrides margin value if set.",
+      "type": ["number", "string"],
+      "minimum": 0,
+      "default": 0
+    },
+    "marginright": {
+      "description": "Right Margin. Overrides margin value if set.",
+      "type": ["number", "string"],
+      "minimum": 0,
+      "default": 0
+    },
+    "margintop": {
+      "description": "Top Margin. Overrides margin value if set.",
+      "type": ["number", "string"],
+      "minimum": 0,
+      "default": 0
+    },
+    "marginbottom": {
+      "description": "Bottom Margin. Overrides margin value if set.",
+      "type": ["number", "string"],
+      "minimum": 0,
+      "default": 0
+    },
+    "matchbox": {
+      "description": "Formatting options applied to the text inside the cell. E.g. used to draw a border independently from the cell.",
+      "type": "Object",
+      "properties": {
+        "borderwidth": {},
+        "drawleft": {},
+        "drawbottom": {},
+        "drawright": {},
+        "offsettop": {},
+        "offsetleft": {},
+        "dasharray": {}
+      }
+    },
+    "font": {
+      "description": "Font for this cell. The font MUST be available on the system generating the PDF.",
+      "type": "Object",
+      "properties": {
+        "fontname": {},
+        "fontsize": {},
+        "fontstyle": {}
+      }
+    }
+  }
+}

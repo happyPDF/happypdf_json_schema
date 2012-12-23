@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "title": "PDF Template",
+  "name": "Pdt",
+  "description": "A PDF Template is a plain PDF with data-placeholders(blocks) in it. During the PDF creation process each block is substituted with supplied plain-text or image data.",
+  "properties": {
+    "id": {
+      "description": "The object identifier.",
+      "identity": true,
+      "readonly": true,
+      "type": "integer"
+    },
+    "name": {
+      "description": "Name shown in interface",
+      "type": "string",
+      "maxlength": 60
+    },
+    "file": {
+      "description": "Filename",
+      "type": "string",
+      "maxlength": 60
+    },
+    "disk_filename": {
+      "description": "Cleaned and unique filename on disk.",
+      "type": "string",
+      "maxlength": 255
+    },
+    "description": {
+      "description": "A description of the template",
+      "type": "string"
+    },
+    "user_id": {
+      "description": "User who created the object",
+      "type": "integer"
+    },
+    "created_at": {
+      "description": "Creation date",
+      "readonly": true,
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "description": "Update date",
+      "readonly": true,
+      "type": "string",
+      "format": "date-time"
+    },
+    "md5": {
+      "description": "MD5 hash created from pdf string.",
+      "type": "string",
+      "maxlength": 40
+    },
+    "author": {
+      "description": "Default Author for PDF created from this template.",
+      "type": "string",
+      "maxlength": 128
+    },
+    "title": {
+      "description": "Default title for PDF created from this template.",
+      "type": "string",
+      "maxlength": 128
+    },
+    "pdf_filename": {
+      "description": "Default filename for PDF created from this template",
+      "type": "string",
+      "maxlength": 128
+    },
+    "account_id": {
+      "description": "Account this objects belongs to.",
+      "type": "integer"
+    },
+    "pages": {
+      "description": "Pages of the doc.",
+      "type": "Array",
+      "properties": {"$ref":"./page.json#properties"}
+    }
+  },
+  "links": [
+
+    {
+      "rel": "instances",
+      "method": "GET",
+      "href": "/pdts"
+    },
+    {
+      "rel": "create",
+      "method": "POST",
+      "href": "/pdts"
+    },
+    {
+      "rel": "self",
+      "href": "/pdts/{id}"
+    },
+    {
+      "rel": "update",
+      "method": "PUT",
+      "href": "/pdts/{id}"
+    },
+    {
+      "rel": "destroy",
+      "method": "DELETE",
+      "href": "/pdts/{id}"
+    }
+  ]
+}

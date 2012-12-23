@@ -1,0 +1,116 @@
+{
+  "name": "Table",
+  "description":"A table to be rendered into a pdf. The table is more or less just a nested hash. Formatting options and table sections(footer, header, body) are on the top level. Rows with cells and options are nested in array-hash structures beneath each section-key.",
+  "type":"object",
+  "properties":{
+    "header": {
+      "description": "Header rows with an array of cells for each row.",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "description": "A single row",
+        "items": {
+          "type": "object",
+          "description": "The cells in the row",
+          "$ref": "./table_cell"
+        }
+      }
+    },
+    "body": {
+      "description": "Body rows with an array of cells for each row.",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "description": "A single row",
+        "items": {
+          "type": "object",
+          "description": "The cells in the row",
+          "$ref": "./table_cell"
+        }
+      }
+    },
+    "footer": {
+      "description": "Footer rows with an array of cells for each row.",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "description": "A single row",
+        "items": {
+          "type": "object",
+          "description": "The cells in the row",
+          "$ref": "./table_cell"
+        }
+      }
+    },
+    "page_break_header": {
+      "description": "Carry over header row. The content of the the last cell is being replace with page_break_value(page_break_footer) from the last body row cell.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "The cells in the row",
+        "$ref": "./table_cell"
+      }
+    },
+    "page_break_footer": {
+      "description": "Carry over header row used as a template for page breaks. The content of the the last cell is being replace with page_break_value from the last body row cell.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "The cells in the row",
+        "$ref": "./table_cell"
+      }
+    },
+    "showcells": {
+      "description": "Show the border of each inner cell. More or less just for debugging.",
+      "type": "boolean",
+      "default": false
+    },
+    "showborder": {
+      "description": "Show the outer border of a table",
+      "type": "boolean",
+      "default": false
+    },
+    "showgrid": {
+      "description": "Draw a border for the vertical and horizontal boundaries of all columns and rows",
+      "type": "boolean",
+      "default": false
+    },
+    "fill": {
+      "description": "fill rows or columns with color",
+      "type": "array",
+      "items":{
+        "area":{
+          "description":"Defines the area to be filled with the given fillcolor. col#: column number # in the table",
+          "type": "string",
+          "enum":["col#","collast","coleven", "colodd", "colother", "row#", "rowlast","roweven","rowodd","header","footer","rowother","table"]
+        },
+        "fillcolor":{
+          "description":" The filling color",
+          "type": "color",
+          "required": true
+        }
+      }
+    },
+    "stroke": {
+      "description": "Draw border-lines for rows or columns: 'stroke': [{'line':'horother', 'strokecolor':'rgb 0 0 0' }]",
+      "type": "array",
+      "items":{
+        "line":{
+          "description":"Defines the area to be filled: vert0: line at the right border of column number #; vert0 is the left table border",
+          "type": "string",
+          "enum":["vert#","vertfirst","vertlast","vertother","hor#","horlast","horfirst","horother","frame","other"]
+        },
+        "strokecolor":{
+          "description":" The line color",
+          "type": "color",
+          "required": true
+        },
+        "linewidth":{
+          "description":" Width if the line.",
+          "type": "number",
+          "default": 1
+        }
+      }
+    }
+  }
+}
