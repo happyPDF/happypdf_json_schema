@@ -1,7 +1,7 @@
 {
   "type": "object",
   "title": "Page",
-  "name": "Page",
+  "name": "page",
   "description": "A page of a PDF which can either belong to a PDF template or archived PDF.",
   "properties": {
     "id": {
@@ -48,7 +48,7 @@
       "type": "integer"
     },
     "screenshot": {
-      "description": "Filename of the screenshot.",
+      "description": "Screenshot file url png",
       "type": "string",
       "maxlength": 128
     },
@@ -57,7 +57,7 @@
       "type": "integer"
     },
     "blocks": {
-      "description": "Placeholder blocks on this page",
+      "description": "Placeholder blocks on this page,, if it belongs to a PDF Template",
       "type": "array",
       "properties": {"$ref":"./block.json#properties"}
     }

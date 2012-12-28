@@ -1,5 +1,6 @@
 {
-  "name": "Table",
+  "title": "Table",
+  "name": "table",
   "description":"A table to be rendered into a pdf. The table is more or less just a nested hash. Formatting options and table sections(footer, header, body) are on the top level. Rows with cells and options are nested in array-hash structures beneath each section-key.",
   "type":"object",
   "properties":{

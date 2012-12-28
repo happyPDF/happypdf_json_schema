@@ -1,5 +1,6 @@
 {
-  "name": "TableCell",
+  "title": "TableCell",
+  "name": "table_cell",
   "description":"Table formatting can be done by passing a json string in the data-attribute table-opts in a html table definition.",
   "type":"object",
   "properties":{

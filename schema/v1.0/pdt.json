@@ -1,7 +1,7 @@
 {
   "type": "object",
   "title": "PDF Template",
-  "name": "Pdt",
+  "name": "pdt",
   "description": "A PDF Template is a plain PDF with data-placeholders(blocks) in it. During the PDF creation process each block is substituted with supplied plain-text or image data.",
   "properties": {
     "id": {
@@ -19,11 +19,6 @@
       "description": "Filename",
       "type": "string",
       "maxlength": 60
-    },
-    "disk_filename": {
-      "description": "Cleaned and unique filename on disk.",
-      "type": "string",
-      "maxlength": 255
     },
     "description": {
       "description": "A description of the template",
@@ -71,8 +66,8 @@
     },
     "pages": {
       "description": "Pages of the doc.",
-      "type": "Array",
-      "properties": {"$ref":"./page.json#properties"}
+      "type": "array",
+      "properties":{"$ref":"./page.json#properties"}
     }
   },
   "links": [

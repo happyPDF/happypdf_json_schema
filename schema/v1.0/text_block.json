@@ -1,8 +1,9 @@
 {
-  "name": "TextBlock",
+  "title": "Text Block",
+  "extends": "block",
   "description":"A single line text block. Multiline text-blocks inherit from this one, see textflow for ref.",
+  "name": "text_block",
   "type":"object",
-  "extends": "Block",
   "properties":{
     "defaulttext": {
       "description": "Content if no text is supplied by the client.",

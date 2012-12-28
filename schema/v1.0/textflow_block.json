@@ -1,8 +1,9 @@
 {
-  "name": "TextFlowBlock",
+  "title": "TextFlowBlock",
+  "name": "textflow_block",
   "description":"Multi line text block, inheriting all properties from Block and TextBlock.",
   "type":"object",
-  "extends": "TextBlock",
+  "extends": "text_block",
   "properties":{
     "textflow ":{
       "description": "This setting must be true, as it makes the block a textflow box.",
