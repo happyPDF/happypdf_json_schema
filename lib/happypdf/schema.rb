@@ -6,7 +6,6 @@ module HappyPdf
     # @param [String] version folder name to use
     def self.path(version='v1.0')
       File.expand_path( File.join('../../schema', version), File.dirname(__FILE__))
-      #File.expand_path( File.join(File.dirname(__FILE__), '../../schema', version) )
     end
   end
 end
