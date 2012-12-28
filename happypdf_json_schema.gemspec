@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'happypdf_schema/version'
+require 'happypdf/version'
 
 Gem::Specification.new do |s|
   s.version = HappyPdf::Schema::VERSION
@@ -19,12 +19,10 @@ Besides ruby users can use a small lib with utility methods to load and test the
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ['lib']
-  s.rubygems_version = '1.8.24'
 
-  s.add_runtime_dependency 'activesupport'
   s.add_development_dependency 'rdoc'
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'json_schema_tools'
   s.add_development_dependency 'rake', '>= 0.9.2'
 
 end
