@@ -33,11 +33,6 @@
       "format": "color",
       "default": "gray 0"
     },
-    "textflow":{
-      "description": "This setting must be false, as it make the block a text-line box.",
-      "type": "boolean",
-      "default": "false"
-    },
     "fitmethod":{
       "type": "string",
       "enum": ["auto","nofit","clip","meet", "slice", "entire"],

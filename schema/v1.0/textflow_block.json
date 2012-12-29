@@ -5,12 +5,6 @@
   "type":"object",
   "extends": "text_block",
   "properties":{
-    "textflow ":{
-      "description": "This setting must be true, as it makes the block a textflow box.",
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
     "alignment":{
       "description": "Alignment for lines in a paragraph.",
       "type": "string",
