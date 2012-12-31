@@ -1,0 +1,11 @@
+{
+  "title": "Image Block",
+  "extends": "block",
+  "description":"A single line text block. Multiline text-blocks inherit from this one, see textflow for ref.",
+  "name": "image_block",
+  "type":"object",
+  "properties":{
+
+
+  }
+}

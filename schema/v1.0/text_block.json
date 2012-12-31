@@ -9,6 +9,16 @@
       "description": "Content if no text is supplied by the client.",
       "type": "string"
     },
+    "margin":{
+      "description": "One or two float values describing horizontal and vertical extensions of a textbox.",
+      "type": "array",
+      "properties":{
+        "type": "number"
+      },
+      "minItems": 1,
+      "maxItems": 2,
+      "default": [0]
+    },
     "fillcolor":{
       "description": "Text fill color. Defaults to black",
       "type": "color",
