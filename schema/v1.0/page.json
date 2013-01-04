@@ -57,7 +57,7 @@
       "type": "integer"
     },
     "blocks": {
-      "description": "Placeholder blocks on this page,, if it belongs to a PDF Template",
+      "description": "Placeholder blocks on this page, if it belongs to a PDF Template",
       "type": "array",
       "properties": {"$ref":"./block.json#properties"}
     }

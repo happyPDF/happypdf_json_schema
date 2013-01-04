@@ -17,6 +17,4 @@ describe HappyPdf::Schema do
     end
 
   end
-
-
 end
