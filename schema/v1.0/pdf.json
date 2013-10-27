@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "title": "PDF",
+  "name": "pdf",
+  "description": "A PDF created from a template.",
+  "properties": {
+    "id": {
+      "description": "The object identifier.",
+      "identity": true,
+      "readonly": true,
+      "type": "integer"
+    },
+    "filename": {
+      "description": "Filename",
+      "type": "string",
+      "maxlength": 128
+    },
+    "pdt_id": {
+      "description": "PDF Template id, used to create this PDF.",
+      "type": "integer"
+    },
+    "user_id": {
+      "description": "User who created the object",
+      "type": "integer"
+    },
+    "created_at": {
+      "description": "Creation date",
+      "readonly": true,
+      "type": "string",
+      "format": "date-time"
+    },
+    "md5": {
+      "description": "MD5 hash created from pdf string.",
+      "type": "string",
+      "maxlength": 40
+    },
+    "account_id": {
+      "description": "Account this objects belongs to.",
+      "type": "integer"
+    },
+    "pages": {
+      "description": "Pages of the pdf, sorted by page number.",
+      "type": "array",
+      "properties":{"$ref":"./page.json#properties"}
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "/pdfs/{id}"
+    },
+    {
+      "rel": "instances",
+      "method": "GET",
+      "href": "/pdfs"
+    },
+    {
+      "rel": "create",
+      "method": "POST",
+      "href": "/pdfs",
+      "properties": {
+        "pdt_id":{
+          "title" : "Template",
+          "description": "ID of an PDF template to use.",
+          "required": true
+        }
+      }
+    },
+    {
+    "rel": "public_download",
+    "href": "/pdfs/{md5}/public_download"
+    },
+    {
+      "rel": "destroy",
+      "method": "DELETE",
+      "href": "/pdfs/{id}"
+    }
+  ]
+}
