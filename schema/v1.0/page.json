@@ -2,7 +2,7 @@
   "type": "object",
   "title": "Page",
   "name": "page",
-  "description": "A page of a PDF which can either belong to a PDF template or archived PDF.",
+  "description": "A page of a PDF which can either belong to a PDF template or archived PDF. ",
   "properties": {
     "id": {
       "description": "The object identifier.",
@@ -15,59 +15,26 @@
       "readonly": true,
       "type": "integer"
     },
-    "related_object_id": {
-      "description": "ID  of the PDF object the page belongs to.",
-      "readonly": true,
-      "type": "integer"
-    },
-    "related_object_type": {
-      "description": "Type of the related object Pdf or Pdt (camelCased class name)",
-      "readonly": true,
-      "type": "string",
-      "maxlength": 20
-    },
     "width": {
       "description": "Page width",
       "type": "number"
-    },
-    "created_at": {
-      "description": "Creation date.",
-      "readonly": true,
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "description": "Update date.",
-      "readonly": true,
-      "type": "string",
-      "format": "date-time"
-    },
-    "user_id": {
-      "description": "User who created the object.",
-      "readonly": true,
-      "type": "integer"
-    },
-    "screenshot": {
-      "description": "Screenshot file url png",
-      "type": "string",
-      "maxlength": 128
-    },
-    "account_id": {
-      "description": "Account this objects belongs to.",
-      "type": "integer"
     },
     "blocks": {
       "description": "Placeholder blocks on this page, if it belongs to a PDF Template",
       "type": "array",
       "properties": {"$ref":"./block.json#properties"}
+    },
+    "public_id": {
+      "description": "Unique ID to be used in public URL e.g to get  the screenshot image of a page.",
+      "readonly": true,
+      "type": "string"
     }
-
   },
   "links": [
     {
-      "rel": "self",
+      "rel": "public screenshot",
       "method": "GET",
-      "href": "/pages/{id}"
+      "href": "/public/pages/{public_id}/screenshot"
     }
   ]
 }
