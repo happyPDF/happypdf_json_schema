@@ -4,7 +4,7 @@ require 'happypdf/version'
 
 Gem::Specification.new do |s|
   s.version = HappyPdf::Schema::VERSION
-  s.date = %q{2012-12-23}
+  s.date = %q{2013-10-27}
   s.name = %q{happypdf_json_schema}
   s.summary = 'happyPDF API - JSON Schema'
   s.description = %q{happyPDF JSON Schema describes our PDF API in terms of available objects, their fields and links to url endpoints with related objects.
