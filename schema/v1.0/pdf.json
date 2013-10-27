@@ -67,10 +67,6 @@
       }
     },
     {
-    "rel": "public_download",
-    "href": "/pdfs/{md5}/public_download"
-    },
-    {
       "rel": "destroy",
       "method": "DELETE",
       "href": "/pdfs/{id}"
