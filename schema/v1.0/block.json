@@ -5,7 +5,7 @@
   "type":"object",
   "properties":{
     "name": {
-      "description": "Name of the block. Must unique within each page. [ ] / are not allowed.",
+      "description": "Name of the block. Must unique within each page. [ ] / are not allowed. To render content twice append #[1-9] to the blockname e.g. firstname#12",
       "type": "string",
       "maxLength": 125,
       "required": true
