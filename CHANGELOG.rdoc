@@ -1,7 +1,0 @@
-= Changelog for happyPDF API Schema
-
-A more detailed view of the changes can be found in the {commit messages}[https://github.com/happypdf/happypdf_json_schema/commits/]
-
-2012-12
-
-  * initial version

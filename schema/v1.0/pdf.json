@@ -19,6 +19,11 @@
       "description": "PDF Template id, used to create this PDF.",
       "type": "integer"
     },
+    "public_id": {
+      "description": "Unique ID to be used in public URL e.g to get  the screenshot image of a page.",
+      "readonly": true,
+      "type": "string"
+    },
     "user_id": {
       "description": "User who created the object",
       "type": "integer"
@@ -28,11 +33,6 @@
       "readonly": true,
       "type": "string",
       "format": "date-time"
-    },
-    "md5": {
-      "description": "MD5 hash created from pdf string.",
-      "type": "string",
-      "maxlength": 40
     },
     "account_id": {
       "description": "Account this objects belongs to.",

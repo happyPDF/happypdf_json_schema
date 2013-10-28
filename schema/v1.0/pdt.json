@@ -13,12 +13,12 @@
     "name": {
       "description": "Name shown in interface",
       "type": "string",
-      "maxlength": 60
+      "maxlength": 128
     },
-    "file": {
+    "filename": {
       "description": "Filename",
       "type": "string",
-      "maxlength": 60
+      "maxlength": 128
     },
     "description": {
       "description": "A description of the template",
@@ -65,7 +65,7 @@
       "type": "integer"
     },
     "pages": {
-      "description": "Pages of the doc.",
+      "description": "Pages of the template.",
       "type": "array",
       "properties":{"$ref":"./page.json#properties"}
     }
