@@ -75,26 +75,26 @@
     {
       "rel": "instances",
       "method": "GET",
-      "href": "/pdts"
+      "href": "api/pdts"
     },
     {
       "rel": "create",
       "method": "POST",
-      "href": "/pdts"
+      "href": "api/pdts"
     },
     {
       "rel": "self",
-      "href": "/pdts/{id}"
+      "href": "api/pdts/{id}"
     },
     {
       "rel": "update",
       "method": "PUT",
-      "href": "/pdts/{id}"
+      "href": "api/pdts/{id}"
     },
     {
       "rel": "destroy",
       "method": "DELETE",
-      "href": "/pdts/{id}"
+      "href": "api/pdts/{id}"
     }
   ]
 }

@@ -38,7 +38,7 @@
     {
       "rel": "public screenshot",
       "method": "GET",
-      "href": "/public/pages/{public_id}/screenshot"
+      "href": "public/pages/{public_id}/screenshot"
     }
   ]
 }

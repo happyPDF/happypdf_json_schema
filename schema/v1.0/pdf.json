@@ -47,17 +47,17 @@
   "links": [
     {
       "rel": "self",
-      "href": "/pdfs/{id}"
+      "href": "api/pdfs/{id}"
     },
     {
       "rel": "instances",
       "method": "GET",
-      "href": "/pdfs"
+      "href": "api/pdfs"
     },
     {
       "rel": "create",
       "method": "POST",
-      "href": "/pdfs",
+      "href": "api/pdfs",
       "properties": {
         "pdt_id":{
           "title" : "Template",
@@ -69,7 +69,7 @@
     {
       "rel": "destroy",
       "method": "DELETE",
-      "href": "/pdfs/{id}"
+      "href": "api/pdfs/{id}"
     }
   ]
 }
