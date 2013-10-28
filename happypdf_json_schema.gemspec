@@ -12,7 +12,6 @@ Besides ruby users can use a small lib with utility methods to load and test the
   s.authors = ['Georg Leciejewski']
   s.email = %q{gl@happypdf.com}
   s.homepage = %q{http://github.com/happypdf/happypdf_json_schema}
-  s.extra_rdoc_files = ['README.rdoc']
   s.executables   = nil
   s.files         = `git ls-files`.split("\n").reject{|i| i[/^docs\//] }
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -20,7 +19,6 @@ Besides ruby users can use a small lib with utility methods to load and test the
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ['lib']
 
-  s.add_development_dependency 'rdoc'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'activesupport'
   s.add_development_dependency 'json_schema_tools'
