@@ -22,6 +22,7 @@ Besides ruby users can use a small lib with utility methods to load and test the
 
   s.add_development_dependency 'rdoc'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'activesupport'
   s.add_development_dependency 'json_schema_tools'
   s.add_development_dependency 'rake', '>= 0.9.2'
 
