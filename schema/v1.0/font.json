@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "title": "Font",
+  "name": "font",
+  "description": "A font, needed to render the block-text. All fonts used in blocks must be present on the server.",
+  "properties": {
+    "id": {
+      "description": "The object identifier.",
+      "identity": true,
+      "readonly": true,
+      "type": "integer"
+    },
+    "filename": {
+      "description": "Font file name. Is created from the font nice name.",
+      "readonly": true,
+      "type": "integer"
+    },
+    "account_id": {
+      "description": "Account this objects belongs to.",
+      "type": "integer"
+    },
+    "user_id": {
+      "description": "User who created the object",
+      "type": "integer"
+    }
+  }
+}

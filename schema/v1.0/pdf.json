@@ -20,7 +20,7 @@
       "type": "integer"
     },
     "public_id": {
-      "description": "Unique ID to be used in public URL e.g to get  the screenshot image of a page.",
+      "description": "Unique ID to be used in public URL e.g for public private download links.",
       "readonly": true,
       "type": "string"
     },
