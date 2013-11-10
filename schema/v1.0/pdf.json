@@ -60,9 +60,25 @@
       "href": "api/pdfs",
       "properties": {
         "pdt_id":{
-          "title" : "Template",
+          "title" : "PDF Template",
           "description": "ID of an PDF template to use.",
-          "required": true
+          "required": true,
+          "type": "number"
+        },
+        "data":{
+          "title" : "Data",
+          "description": "The data (text, images) rendered into the placeholder blocks e.g.: {'my-block-name': 'my content', 'firstname': 'Edward'} The object is just a plain hash with the block-name as key and the respecting value.",
+          "type": "object"
+        },
+        "author":{
+          "title" : "PDF Author",
+          "description": "If not set the author is taken from the PDF template setting or falls back to happyPDF.",
+          "type": "string"
+        },
+        "title":{
+          "title" : "PDF title",
+          "description": "If not set the title is taken from the PDF template setting.",
+          "type": "string"
         }
       }
     },
